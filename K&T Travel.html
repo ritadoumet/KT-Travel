@@ -1,0 +1,883 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>K&T Travel</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta name="description" content="K&T Travel offers you the best travel experience you could ever wish for, around the globe.">
+		<meta name="keywords" content="travel,italy,spain,lebanon,morocco,france,cheap,beautiful,destination,trip,country,ticket">
+		<link rel="icon" href="icon.png" type="image/icon"/>
+		<link rel="preconnect" href="https://fonts.gstatic.com">
+		<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
+		<style type="text/css">
+		body{
+			background-image:url("italy.jpg");
+			background-attachment:fixed;
+			background-repeat:no-repeat;
+			background-size:cover;
+			font-family:montserrat;
+			overflow:overlay;
+			height:100%;
+			margin:0;
+			transition: background 1.5s linear;
+			}
+		.side-nav{
+			width:35%;
+			height:100%;
+			border-radius:0 10px 10px 0;
+			margin-bottom:70px;
+			padding:10px 10px 10px 0;
+			background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.2) 25%, rgba(255, 255, 255, 0.2) 75%, rgba(255, 255, 255, 0) 100%);
+    box-shadow: 0 0 100px rgba(0, 0, 0, 0.1), inset 0 0 15px rgba(255, 255, 255,0.3), inset 0 0 10px rgba(255,240,245,0.6), inset 0 0 30px 300px rgba(100,50,100,0.1);
+			}
+		nav.side-nav li {
+			color:white;
+			padding:0 0 3px 15px;
+			margin:5px 20px 30px 40px;
+			font-size:28px;
+			font-weight:bold;}
+			
+		nav.side-nav span 
+		{
+			font-size:16px;
+			font-weight:normal;
+			}
+		li::marker{
+			color:rgba(255,255,255,0.6);
+		
+		}
+		#backcountry{
+		font-size:135px;text-align:right;margin:0;font-weight:bold;text-shadow:5px 5px 5px rgba(0,0,0,0.4);}
+		
+		nav.side-nav div:hover {
+			
+			height: 120px;
+			width: 600px;
+			padding: 20px;
+			background: linear-gradient(90deg,rgba(255,255,255,0.3)0%,rgba(255,255,255,0.2)50%,rgba(255,255,255,0.1)60%,rgba(255,255,255,0)70%);
+			position: relative;
+			left: 0;
+			box-shadow: -150px -20px 100px 10px rgba(0,0,0,0.1),-150px 20px 100px 10px rgba(0,0,0,0.1);
+			font-size:40px;
+			cursor:pointer;
+			}
+		nav.side-nav div{
+		}
+		.top-nav{
+			position:absolute;
+			top:5px;;
+			right:20px;
+			color:white;
+			font-size:22px;
+			font-weight:bold;
+		}
+		.top-nav span{
+			margin:17px 20px 0 0;
+			padding-bottom:5px;}	
+		.top-nav span:hover{
+			cursor:pointer;
+			border-bottom:3px solid white;
+			}
+		.side{
+			position:absolute;
+			top:200px;
+			right:20px;
+			color:white;
+			
+			transform: translate(0, 50%);}
+		#input{
+			background-color:rgba(255,255,255,0.3);
+			border-bottom:3px solid white;
+			border-top:none;
+			border-radius:5px;
+			border-left:none;
+			border-right:none;
+			color:white;
+			font-size: 20px;
+			font-family:montserrat;
+			height: 100%;
+			outline: none;
+			padding-inline-end: 40px;
+			padding-inline-start: 30px;
+			position: relative;
+			float:right;}
+		
+		::placeholder{
+			color:white;
+			font-family:montserrat;
+			
+			font-size:20px;
+			padding:7px;}
+		div.descimg div {width:min-content;display:inline-block;}
+		a {text-decoration:none;
+			color:white;}	
+		#gallery{
+			margin-top:70px;
+			width:85%;
+			height:auto;
+			align:center;
+			margin:auto;
+			border-radius:20px ;
+			background-color:white;
+			color:#bf9fab;
+			position:relative;
+			box-shadow:0 0 30px 20px rgba(0,0,0,0.3);}
+		#gallery h3{
+		font-size:70px; font-weight:bold;margin:auto;text-align:center;padding:40px}
+		#gallery hr{border-top:2px solid #bf9fab;
+			margin-right:30%;
+			margin-left:30%; 
+			margin-bottom:40px;}
+		#gallery h2{
+			
+			font-size:40px;}
+		.country{
+			margin:3%;
+			padding:10px;
+			}
+		.desc{display:inline-block;
+			text-align:right;
+			width:50%;
+			color:#917982;}
+		.descimg{display:inline;
+			margin:50px 0px 50px 40px;}
+		.descimg img{border-radius:10px;}
+		.bubble{
+			    border-radius: 0% 20px 0px 50%;
+    
+				width: 25%;
+				display: inline-block;
+				height: 250px;
+				
+				position: absolute;
+				opacity: 0.8;
+				background-color: #917982;
+
+			}
+		.bubble p{
+			     position: relative;
+				font-size: 1em;
+				color: white;
+				text-align: center;
+				width: 70%;
+				
+				padding: 10px 0px 20% 25%;
+				
+				}
+		button{position: relative;
+    bottom: 10px;
+    height: 30px;
+   background-color: #917982;
+    font-family: montserrat;
+    color: white;
+    border-radius: 4px;
+	cursor:pointer;
+    border:none;
+	    margin: 0 0 10px 0;
+   
+		}
+		#bookings{ 
+			background-color:#917982;
+			border-radius:0 0 20px 20px;
+			width:70%;
+			
+			color:white;
+			font-family:montserrat;
+			height:auto;
+			align:center;
+			position:relative;
+			box-shadow:0 30px 30px 20px rgba(0,0,0,0.3);
+			margin:auto;}
+		#bookings h3{
+		font-size:70px; font-weight:bold;margin:auto;text-align:center;padding:40px}
+		#bookings hr{border-top:2px solid white;
+			margin-right:30%;
+			margin-left:30%; 
+			margin-bottom:40px;}
+		#bookings h2{
+			
+			font-size:40px;}
+		label{
+		font-size:28px;
+		font-weight:bold;}
+		form{
+		text-align:center;
+		margin:20px 30%;}
+		
+		.butt{
+		position: relative;
+    bottom: 10px;
+    height: 30px;
+    background-color: #e6d8d9;
+    font-family: montserrat;
+    color: #171212;
+    border-radius: 4px;
+    border-top: none;
+    border-color: #917982;
+    border-right: none;
+		}
+		
+		 input, select {
+    border: 1px solid rgb(191 159 171);
+    border-radius: 4px;}
+		
+		
+		#card{
+		display:none;}
+		
+		#email ::placeholder{
+		    color: rosybrown;
+    font-size: small;}
+	
+::-webkit-scrollbar {
+  width: 18px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+	
+  background: transparent;
+   box-shadow:-2px 0 30px 2px rgba(0,0,0,0.2), inset 4px 4px 8px rgba(50,0,0,0.2), inset -4px -4px 8px rgba(255,230,230,0.4);
+  
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+
+  background: rgba(166,139,149,0.8);
+
+  border-radius:15px 0;
+  border:1px solid rgba(255,220,220,0.5);
+  border-right:none;
+  border-bottom:none;
+  box-shadow:2px 5px 10px 1px rgba(0,0,0,0.2), inset 1px 1px 4px 3px rgba(255,200,200,0.5); 
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #b79ca6; 
+}
+	
+	
+	@media only screen and (max-width: 850px){
+		#backcountry {
+    font-size: 12vh;}
+		.side-nav{width:45% !important;}
+		.top-nav{font-size:3vw;}
+	
+	}
+	@media only screen and (max-width: 560px){
+		#backcountry {
+    font-size: 12vh;}
+	
+		.side-nav{width:100% !important;
+		    position: relative;
+    top: 50px;
+	margin-bottom:110px;
+		}
+	.side{display:none;}
+	
+	.top-nav {
+    margin: auto;
+    width: max-content;
+    position: relative;
+    right: 0;
+    top: 5px;
+    font-size: 5vw;}
+	
+	nav.side-nav li{padding:20px;
+	font-size:4vw;}
+	
+	nav.side-nav span{font-size:3vw;}
+	.bubble {
+    border-radius: 0 50px;
+    width: 70%;
+    display: block;
+    /* height: 250px; */
+    position: relative;
+    opacity: 0.8;
+    margin: auto;
+    height: auto;
+    background-color: #917982;
+}
+.bubble p {
+    position: relative;
+    font-size: 1em;
+    color: white;
+    text-align: center;
+    width: 70%;
+    padding: 10px;
+    margin: auto;
+}
+.desc {
+    text-align: c;
+    text-align: center;
+    /* text-align: right; */
+    width: 100%;
+    color: #917982;
+}
+.descimg img {
+    width: 60%;
+    border-radius: 15px;
+}
+footer{width:102%;}
+#gallery{width:102%;}
+	#gallery hr {
+    border-top: 2px solid #bf9fab;
+    margin-right: 20%;
+    margin-left: 20%;
+    margin-bottom: 40px;
+    margin-top: 40px;
+}
+div#bookings form{margin: 20px 10%;}
+div#bookings div p{
+position: relative;
+    font-size: 1em;
+    color: #917982;
+    text-align: center;
+    width: 70%;
+    padding: 10px;
+    margin: auto;
+}
+#bookings{width:85%;}
+
+#bookings div.bubble{display:none;}
+}
+	
+	
+		</style>
+	</head>
+	<body >
+		<script>
+
+
+var num=0;
+
+
+function changeback(){
+if (num%5==0){
+
+    document.body.style.backgroundImage="url('back1.jpg')";
+	document.getElementById("backcity").innerHTML="Barcelona";
+	document.getElementById("backcountry").innerHTML="Spain";}
+if (num%5==1){
+document.body.style.backgroundImage="url('back2.jpg')";
+	document.getElementById("backcity").innerHTML="Mt. St. Michel";
+	document.getElementById("backcountry").innerHTML="France";}
+	
+if (num%5==2){
+
+document.body.style.backgroundImage="url('back3.jpg')";
+	document.getElementById("backcity").innerHTML="St Paul Cathedral";
+	document.getElementById("backcountry").innerHTML="Lebanon";
+}
+	
+	if (num%5==3){
+
+document.body.style.backgroundImage="url('back4.jpg')";
+	document.getElementById("backcity").innerHTML="Marrakech";
+	document.getElementById("backcountry").innerHTML="Morocco";
+}
+	
+	
+if (num%5==4){
+
+document.body.style.backgroundImage="url('italy.jpg')";
+	document.getElementById("backcity").innerHTML="Manarola";
+	document.getElementById("backcountry").innerHTML="Italy";}
+
+num++;
+}
+
+setInterval(changeback,10000);	
+
+
+	function changedate(){
+var today = new Date();
+var dd = today.getDate();
+var mm = today.getMonth()+1;
+var yyyy = today.getFullYear();
+ if(dd<10){
+        dd='0'+dd
+    } 
+    if(mm<10){
+        mm='0'+mm
+    } 
+
+today = yyyy+'-'+mm+'-'+dd+'T08:30';
+document.getElementById("date").setAttribute("min", today);}
+
+
+		function check(){
+				var start = document.getElementById("from");
+			var departure = start.value;
+			
+			var end = document.getElementById("to");
+			var destination = end.value;
+			if ( !departure || !destination)
+				{ document.getElementById("exception").innerHTML="You need to choose a proper departure and destination";
+				}
+			else if (departure==destination ){
+			
+				
+				document.getElementById("exception").innerHTML = "You cannot choose the same country of departure and destination.";
+				document.getElementById("price").innerHTML="";
+				
+			}
+			else if((destination=="Spain" ||destination=="Morocco")&& departure=="Lebanon"){
+				document.getElementById("exception").innerHTML = "There are no flights from "+departure+" to " +destination+" at the moment.";
+				}
+			else{
+				document.getElementById("exception").innerHTML = "";
+			}
+	
+		
+		if((destination=="France" ||destination=="Italy")&& departure=="Lebanon"){
+			document.getElementById("price").innerHTML = "510";
+			}
+			
+			if((destination=="Spain" ||destination=="Morocco")&& departure=="Italy"){
+				document.getElementById("price").innerHTML = "500";
+				}
+				
+				if((destination=="France" ||destination=="Lebanon")&& departure=="Italy"){
+				document.getElementById("price").innerHTML = "540";
+				}
+				
+				
+				if((destination=="Spain" ||destination=="Lebanon")&& departure=="France"){
+				document.getElementById("price").innerHTML = "490";
+				}
+			
+			if((destination=="Italy" ||destination=="Morocco")&& departure=="France"){
+				document.getElementById("price").innerHTML = "545";
+				}
+				
+				if((destination=="France" ||destination=="Lebanon")&& departure=="Morocco"){
+				document.getElementById("price").innerHTML = "515";
+				}
+			
+			if((destination=="Spain" ||destination=="Italy")&& departure=="Morocco"){
+				document.getElementById("price").innerHTML = "529";
+				}
+			if((destination=="Italy" ||destination=="Lebanon")&& departure=="Spain"){
+				document.getElementById("price").innerHTML = "502";
+				}
+				
+				if((destination=="France" ||destination=="Morocco")&& departure=="Spain"){
+				document.getElementById("price").innerHTML = "510";
+				}
+			
+			
+			
+			
+		}
+		
+		function show(){
+		document.getElementById("card").style.display="block";
+		document.getElementById("email").style.display="none";
+		document.getElementById("mail").required=false;
+		document.getElementById("bla").required=true;
+		document.getElementById("blabla").required=true;
+		}
+		 
+		function hide(){
+		document.getElementById("card").style.display="none";
+		document.getElementById("email").style.display="block";
+		document.getElementById("bla").required=false;
+		document.getElementById("blabla").required=false;
+		document.getElementById("mail").required=true;
+		}
+		
+		
+ var imagesSpain = [
+		'spain1.jpg',
+		'spain2.jpg',
+		'spain3.jpg'
+		
+];
+var num = 0;
+function nextspain() {
+    var sliderspain = document.getElementById('sliderspain');
+    num++;
+    if(num >= imagesSpain.length) {
+        num = 0;
+    }
+    sliderspain.src = imagesSpain[num];
+}
+function prevspain() {
+    var sliderspain = document.getElementById('sliderspain');
+    num--;
+    if(num < 0) {
+        num = imagesSpain.length-1;
+    }
+    sliderspain.src = imagesSpain[num];
+}
+
+
+
+
+
+ var imagesItaly = [
+		'italy1.jpg',
+		'italy2.jpg',
+		'italy3.jpg'
+		
+];
+var num = 0;
+function nextitaly() {
+    var slideritaly = document.getElementById('slideritaly');
+    num++;
+    if(num >= imagesItaly.length) {
+        num = 0;
+    }
+    slideritaly.src = imagesItaly[num];
+}
+function previtaly() {
+    var slideritaly = document.getElementById('slideritaly');
+    num--;
+    if(num < 0) {
+        num = imagesItaly.length-1;
+    }
+    slideritaly.src = imagesItaly[num];
+}
+
+
+
+
+
+ var imagesLebanon = [
+		'lebanon1.jpg',
+		'lebanon2.jpg',
+		'lebanon3.jpg'
+		
+];
+var num = 0;
+function nextlebanon() {
+    var sliderlebanon = document.getElementById('sliderlebanon');
+    num++;
+    if(num >= imagesLebanon.length) {
+        num = 0;
+    }
+    sliderlebanon.src = imagesLebanon[num];
+}
+function prevlebanon() {
+    var sliderlebanon = document.getElementById('sliderlebanon');
+    num--;
+    if(num < 0) {
+        num = imagesLebanon.length-1;
+    }
+    sliderlebanon.src = imagesLebanon[num];
+}
+
+
+
+
+
+
+ var imagesFrance= [
+		'france1.jpg',
+		'france2.jpg',
+		'france3.jpg'
+		
+];
+var num = 0;
+function nextfrance() {
+    var sliderfrance = document.getElementById('sliderfrance');
+    num++;
+    if(num >= imagesFrance.length) {
+        num = 0;
+    }
+    sliderfrance.src = imagesFrance[num];
+}
+function prevfrance() {
+    var sliderfrance = document.getElementById('sliderfrance');
+    num--;
+    if(num < 0) {
+        num = imagesFrance.length-1;
+    }
+    sliderfrance.src = imagesFrance[num];
+}
+
+
+
+function changeBACKIMG(){
+    document.body.style.backgroundImage="france1.jpg";
+}
+
+setInterval(changeBACKIMG,10000);
+
+
+
+ var imagesMor = [
+		'morocco1.jpg',
+		'morocco2.jpg',
+		'morocco3.jpg'
+		
+];
+var num = 0;
+function nextmor() {
+    var slidermor = document.getElementById('slidermor');
+    num++;
+    if(num >= imagesMor.length) {
+        num = 0;
+    }
+    slidermor.src = imagesMor[num];
+}
+function prevmor() {
+    var slidermor = document.getElementById('slidermor');
+    num--;
+    if(num < 0) {
+        num = imagesMor.length-1;
+    }
+    slidermor.src = imagesMor[num];
+}
+
+
+   function upload(){
+	var ab=document.getElementById("from");
+	var bc=document.getElementById("to")
+				if ( !ab.value || !bc.value || (ab.value==bc.value))
+				{ alert("You need to enter a valid departure and destination in order to submit your info.");
+				return false;}
+                alert("Info submitted successfully. You will receive a message from us shortly. Thank you for choosing K&T Travel!");
+       
+
+
+	   }
+	   
+	    var countDownDate = new Date("Feb 27, 2021 23:59:59").getTime();
+    var x = setInterval(function(){
+    var now = new Date().getTime();
+    var distance = countDownDate - now;
+    var days= Math.floor(distance / (1000 * 60 * 60 *24));
+    var hours = Math.floor((distance % (1000 * 60 * 60 *24)) / (1000 * 60 *60));
+    var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+    var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+    
+    document.getElementById("demo").innerHTML = days + "d " + hours + "h " + minutes + "m " + seconds + "s ";
+    if (distance < 0){
+       clearInterval(x);
+       document.getElementById("demo").innerHTML = "YOUR OFFER HAS EXPIRED"
+    }
+    }, 1000);
+//ejre bel se3a li t3allamet fiya javascript 3al se3a li fetet fiya computer science. ejre bhal chaghle
+//update:nevermind meche l code
+//update2:EJRE BKEL CHI
+		</script>
+		
+	
+		<nav class="top-nav">
+			
+			<a href="#bookings"><span>Bookings</span></a>
+			<a href="#gallery"><span>Gallery</span></a>	
+			<span><a href="tour.html" style="margin:0;">Find a tour</a></span>
+		
+		</nav>
+			<nav class="side-nav">
+			<ol style="padding-left:0px;margin:0;">
+				<h3 style="color:white;text-align:center;font-size:32px;">Select a country</h3>
+		<!--bel onclick, changeImg awal param houwe l country, tene wahad houwe l img number. 3enna 5 countries w 15 imgs in total, kel country 3enda 3 -->
+				<a href="#spain" onclick="changeImg(0,0)"><div><li>Spain<br><span>Imagine yourself sipping wine on the coast of spain, with your beautiful novia next to you. The dream.</span></li></div></a>
+				<a href="#italy" onclick="changeImg(1,3)"><div><li>Italy<br><span>Pizza. Gelato. Pasta. Renaissance Art. You name it.</span></li></div></a>
+				<a href="#lebanon" onclick="changeImg(2,6)"><div><li>Lebanon<br><span>Savour the famous Tabbouleh and sip Arak while the fresh breeze of the Mediterranean caresses your cheek.</span></li></div></a>
+				<a href="#france" onclick="changeImg(3,9)"><div><li>France<br><span>It's the most visited country per yer worldwide.For a reason.</span></li></div></a>
+				<a href="#morocco" onclick="changeImg(4,12)"><div><li>Morocco<br><span>What's better than a hot dish of couscous?</span></li></div></a>
+				
+			</ol>
+		</nav>
+		<div class="side">
+			<p style="font-size:30px;font-weight:bold;text-align:right;margin:0;text-shadow:1px 1px 5px rgba(0,0,0,0.4);" id="backcity">Manarola</p>
+			<p id="backcountry">Italy</p>
+			
+		</div>
+		<div id="gallery">
+			<h3>Gallery</h3>
+			<div class="bubble" style="right:0px;top:0px;"><p style="color:white;">All pics are taken by clients on our trips from accross the world!</p></div>
+			<hr>
+			<div class="country" id="spain">
+				<div class="desc">
+					<h2>SPAIN</h3>
+					<p>Few countries can match the allure of Spain. The endless summer of the Costa del Sol. The busy tapas bars serving up the freshest dishes west of Rome. And the late-night buzz of its ancient towns and cities. All these help make it one of the most exciting destinations in the world. </p>
+				</div>
+				<div class="descimg" >
+					
+					<img src="spain1.jpg" width="33%" height="80%" id="sliderspain">
+					<div style="width:min-content; display:inline-block;">
+					<button onclick="prevspain()">Prev</button>
+					<button onclick="nextspain()">Next</button></div>
+				</div>
+				</div>
+				<hr>
+			<div class="country" id="italy">
+				<div class="desc">
+					<h2>Italy</h3>
+					<p>Italy is famous for its huge contributions to the worlds of art, architecture, fashion, opera, literature, design, and film – the list goes on, and we haven’t even mentioned the food yet.</p>
+				</div>
+				<div class="descimg" >
+					
+					<img src="italy1.jpg" width="33%" height="80%" id="slideritaly" >
+					<div>
+					<button onclick="previtaly()">Prev</button>
+					<button onclick="nextitaly()">Next</button></div>
+				</div>
+				</div>
+				<hr>
+				
+			<div class="country" id="lebanon">
+				<div class="desc">
+					<h2>Lebanon</h3>
+					<p>This diminutive Mediterranean nation is a fascinating nexus point of the Middle East and the West; of Christianity and Islam; of tradition and modernity. It’s a place where culture, family and religion are all-important</p>
+				</div>
+				<div class="descimg" >
+					
+					<img src="lebanon1.jpg" width="33%" height="80%" id="sliderlebanon">
+					<div>
+					<button onclick="prevlebanon()">Prev</button>
+					<button onclick="nextlebanon()">Next</button></div>
+				</div>
+				</div>
+				<hr>
+				<div class="country" id="france">
+				<div class="desc">
+					<h2>France</h3>
+					<p>What’s France famous for? Mostly Paris. Also wine, fashion, food, cars and Paris. And of course, let’s not forget about Paris.<br>Jokes aside, the capital of this stunning country is one of the hottest tourist destinations in the world, with several attractions that make this country famous worldwide. </p>
+				</div>
+				<div class="descimg" >
+					
+					<img src="france1.jpg" width="33%" height="80%" id="sliderfrance">
+					<div>
+					<button onclick="prevfrance()">Prev</button>
+					<button onclick="nextfrance()">Next</button></div>
+				</div>
+				</div>
+				<hr>
+				<div class="country" id="morocco" style="margin-bottom:0;">
+				<div class="desc">
+					<h2>Morocco</h3>
+					<p>Morocco is known for its Medinas, which are cities' historical downtowns and the place to hunt for traditional handicrafts. All Moroccan handicrafts, like jewelry, rugs, leather items and teapots can be found in the Medina. </p>
+				</div>
+				<div class="descimg" >
+					
+					<img src="morocco1.jpg" width="33%" height="80%" id="slidermor">
+					<div>
+					<button onclick="prevmor()">Prev</button>
+					<button onclick="nextmor()">Next</button></div>
+				</div>
+				<hr><br>
+				</div>
+				
+				
+			</div> <!--hay lal gallery kella sawa-->
+		<div id="bookings">
+			<h3>Bookings</h3>
+			<hr>
+			<form  onsubmit="return upload();" method="post">
+				<p><label>Departure
+					<select id="from" onchange="check()">
+						 
+						<option value="Spain" >Spain<option>
+						<option value="Italy">Italy</option>
+						<option value="Lebanon">Lebanon</option>
+						<option value="France">France</option>
+						<option value="Morocco">Morocco</option>
+					</select>
+					</label></p>
+				<p><label>Destination
+					<select id="to" onchange="check()">
+						<option value="Spain">Spain<option>
+						<option value="Italy" selected>Italy</option>
+						<option value="Lebanon">Lebanon</option>
+						<option value="France">France</option>
+						<option value="Morocco">Morocco</option>
+					</select>
+					</label></p>
+					<p id="exception"></p>
+					
+					
+					<p><label>Date
+						<input type="datetime-local" id="date" min="2021-01-01T08:30" onclick="changedate()"required><label></p><hr>
+						
+					
+					<p style="display:inline-block;">Price of ticket(in USD):</p><p style="display:inline-block;border-radius:10px;background-color:rgba(240,220,220,0.4);color:white;font-weight:bold;padding:3px 5px;"id="price">502</p>
+					
+					<div style="width:auto;margin:auto;margin-top:30px;margin-bottom:3px;font-size:14px;color:white;text-align:center;">Your 20% discount offer will end in:</div>
+					<div id="demo" style="border-radius:25px;background-color:rgba(240,220,220,0.4);color:white;font-weight:bold;text-align:center;width:auto;margin:auto;padding:9px 5px;margin-bottom:20px;font-size:30px;"></div>
+					<hr><h2>Payment method<br><label>By card
+						<input type="radio" name="card" value="By card" onchange="show()"required>
+							<div id="card" style="border-radius:35px; background-color:rgba(240,220,220,0.4);padding:10px;margin:5px;">
+								<p><label>Card nb.
+								<input type="password" name="cardnb" required id="bla">
+								
+								</label></p>
+								<p><label>Password
+								<input type="password" name="pass" required id="blabla">
+								</label></p>
+							</div>
+							</label>
+							<label>By cash
+						<input type="radio" name="card" value="By cash" onchange="hide()"  id="myRadio"></label>
+						
+						<div id="email" style="border-radius:35px; background-color:rgba(240,220,220,0.4);padding:10px;margin:5px;">
+							<p><label>Enter e-mail address
+							<input type="email" placeholder="user@gmail.com" width="85px"  name="email" id="mail"></label></p>
+						</div>
+						</h2>
+					
+					<input type="submit" value="Submit" class="butt">
+					<input type="reset" value="Clear" class="butt">
+
+					
+			
+			</form>
+			<hr>
+			<div style="position:absolute;left:0;bottom:0;width:20%;display:inline-block;opacity:0.8;background-color:white;border-radius:0 50% 0 20px;" class="bubble">
+			<p style="position:relative;font-size:1em;color:#917982;text-align:center;width:70%;padding:10px 15% 20% 15%" >Our rate is still 1500 LBP/USD!</p>
+			</div>
+		</div><!-- hay lal bookings-->
+				
+			
+			<!--border-radius:  position: relative;
+				font-size: 1em;
+				color: white;
+				text-align: center;
+				width: 70%;
+				
+				padding: 10px 0px 20% 25%;
+				
+				
+				
+				    border-radius: 50%;
+    filter: invert(1);
+    padding: 4px;
+    box-shadow: 3px -2px 20px 1px #003233, inset -4px 2px 8px 1px rgba(0,55,55,0.4), -2px 2px 10px 1px rgba(255,255,255,0.4);
+    border: 2px solid rgba(0,55,55,0.6);
+    border-bottom: none;
+    border-left: none;
+				-->
+			
+				
+	</body>
+		<div style="position:sticky;bottom:5px;float:right;right:20px;">
+				
+					<div style="filter: invert(1);background:rgb(64,96,84); border: 2px solid rgba(0,55,55,0.6); border-left: none; border-bottom: none;display:inline-block;background-image:url('icon.png');border-radius:50%; width:40px;height:40px;background-size:contain;box-shadow: 3px -2px 5px 1px rgba(0,50,51,0.4), inset -4px 2px 8px 1px rgba(0,55,55,0.4), -2px 2px 5px 1px rgba(255,255,255,0.6);"></div>
+				<p style="display:inline-block;color:white;font-size:20px;position:relative;bottom:11px;text-shadow:-1px 1px 2px rgba(0,0,0,1);">K&T Travel</p>
+				</div>
+	<footer style="position:inherit;bottom:0;width:100%;height:auto;background-color:white;color:#917982;border-radius:20px 20px 0 0; box-shadow:0 -5px 25px 4px rgba(0,0,0,0.3);">
+			<table style="align:center;margin-left:auto;margin-right:auto;width:auto;padding:20px;">
+				<tr>
+					<th style="padding:0 20px 0 0;font-size:27px;">Contact us</th>
+				
+				
+					<td><a href="mailto:rita.17.2001@gmail.com" style="color:#917982;text-decoration:underline;">Email</a><p>Phone number: +961 70 119 630</p></td>
+					<th style="padding:0 20px 0 85px;font-size:27px;">Our new <br>business</th>
+					<td ><div style="display:inline-block;background-image:url('fork.jpg');border-radius:50%; width:40px;height:40px;background-size:contain;background-color:white;box-shadow:0 0 4px 2px rgba(0,0,0,0.5);"></div>
+					<a href="K&T Resto.html" style="color:#917982;text-decoration:underline;display:inline-block;position:relative;bottom:11px;">K&T Resto</a></td>
+					
+					
+					
+					</tr>
+				
+			</table>
+			</footer>
+</html>

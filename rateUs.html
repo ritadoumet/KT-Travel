@@ -1,0 +1,245 @@
+<html>
+	<head><title>RATE US</title>
+				<link rel="preconnect" href="https://fonts.gstatic.com">
+		<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&family=Playfair+Display:wght@500&display=swap" rel="stylesheet">
+		<script src="https://kit.fontawesome.com/ae56d56b77.js" crossorigin="anonymous"></script>
+		<style type="text/css">
+			body{padding:0;
+			margin:0;
+			overflow:overlay;
+			font-family:montserrat;
+			background-image:linear-gradient(to right,#bf9fab,#f5a637);
+			}
+			h1{color:black;position:relative;margin:auto;font-weight:bold;top:-30px;font-size:3.6vw;left:100px;}
+			.travel{font-family:montserrat;}
+			.resto{font-family:Playfair Display,serif;}
+			
+			#main{width:80%;
+			position:relative;
+			border-radius:100px 100px 0 0;
+			top:100px;
+			margin:auto;
+			background-color:white;
+			PADDING-BOTTOM:40PX;
+			}
+			p{width:fit-content;margin:auto;font-size:2.5vw; margin-bottom:20px;}
+			form{width:85%;margin:auto;position:relative;}
+			textarea {
+    border-radius: 40px 40px 0 0;
+	margin-bottom:20px;
+    border: 3px solid #bf9fab;
+    margin: 10px 10%;
+    padding: 20px;
+    width: 80%;
+    font-size: 16px;
+    color: #777;
+    font-family: 'Montserrat';
+	    box-shadow: inset 0 1px 2px 0 rgba(60,64,67,0.302), inset 0 2px 6px 2px rgba(60,64,67,0.149);
+}
+::-webkit-scrollbar {
+  width: 18px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+	border-radius:15px 0;
+  background: transparent;
+   box-shadow:-2px 0 30px 2px rgba(0,0,0,0.2), inset 4px 4px 8px rgba(50,0,0,0.2), inset -4px -4px 8px rgba(255,230,230,0.4);
+  
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+
+  background-image:linear-gradient( rgba(166,139,149,1),rgba(245,166,55,0.8));
+
+  border-radius:15px 0;
+  border:1px solid rgba(255,220,220,0.5);
+  border-right:none;
+  border-bottom:none;
+  box-shadow:2px 5px 10px 1px rgba(0,0,0,0.2), inset 1px 1px 4px 3px rgba(255,200,200,0.5); 
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #b79ca6; 
+}
+
+	button {
+    z-index: 2;
+    border-radius: 100rem;
+    padding: 5px 10px;
+    text-align: center;
+    height: fit-content;
+    WIDTH: 17%;
+    box-shadow: 0 0 6px rgba(50,50,50,0.2);
+    border: solid 3px transparent;
+    background-image: linear-gradient(rgba(0,0,0,0),rgba(255,255,255,0)),linear-gradient(to right,#bf9fab,#f5a637);
+    background-origin: border-box;
+    background-clip: content-box,border-box;
+    box-shadow: 2px 1000px #fff inset;
+    position: absolute;
+    top: 1oopx;
+    right: 20%;
+}
+
+	button:hover{box-shadow:none;color:white;cursor:pointer;}
+	#reviews{
+		 border-radius: 0 0 40px 40px ;
+	margin-bottom:20px;
+    border: 3px solid #bf9fab;
+    margin: 10px 10%;
+    padding: 20px;
+        box-shadow: inset 0 1px 2px 0 rgba(60,64,67,0.302), inset 0 2px 6px 2px rgba(60,64,67,0.149);
+    font-size: 12px;
+    color: #777;
+    font-family: 'Montserrat';
+	}
+	#reviews div{
+	width:100%;
+	border-bottom:1px solid #777;
+	color:#777;
+	padding:20px 0;
+	font-size:16px;
+	}
+	i{
+	color:#f5a637;
+	font-size:16px;}
+	
+	@media only screen and (max-width: 850px){
+	#main{width:100%}
+	
+	}
+	.dark{color:#777;}
+	#bold{margin: 100px 0 20px 25%;
+    display: inline;
+    cursor: pointer;font-size:20px;}
+	#italic{
+	    font-style: italic;
+    margin: 100px 0 20px 2%;
+    display: inline;
+    cursor: pointer;
+	font-size:20px;
+	}
+	span i {font-size:30px;}
+	span i:hover{transform:scale(1.2);cursor:pointer;}
+	#reviews div{position:relative}
+	edit{position:absolute;right:10%;top:15px;font-size:14px;text-decoration:underline;border:none;background-color:inherit;color:#bf9fab;}
+		</style>
+	</head>
+	<body></body>
+		<a href="K&T Travel.html" style="color:white;font-style:italic;text-decoration:none;font-size:18px;padding:10px 0 0 10px;">Go back to <strong>K&T Travel</strong></a>
+		<a href="K&T Resto.html" style="color:white;font-style:italic;text-decoration:none;font-size:18px;">or <strong>K&T Resto</strong></a>
+		<div id="main">
+		<h1><span class="resto">K&T Resto</span><span class="travel"> & Travel</span></h1>
+			<p>Rate our services</p>
+			<p id="bold" onclick="bold()"><strong>bold</strong></p>
+			<p id="italic" style="font-style:italic" onclick="italic()">italic</p>
+			<button onclick="hichamComment()">Post</button>
+			<form>
+				<span style="position:relative;left:20%;" id="span"><i class="fas fa-star" onclick="changeStar(1)" onmouseover="changeStarHOVER(1)" onmouseleave="changeStar(nOfStars)"></i><i class="fas fa-star" onclick="changeStar(2)" onmouseover="changeStarHOVER(2)" onmouseleave="changeStar(nOfStars)"></i><i class="fas fa-star" onclick="changeStar(3)" onmouseover="changeStarHOVER(3)" onmouseleave="changeStar(nOfStars)"></i><i class="fas fa-star" onclick="changeStar(4)" onmouseover="changeStarHOVER(4)" onmouseleave="changeStar(nOfStars)"></i><i class="fas fa-star" onclick="changeStar(5)" onmouseover="changeStarHOVER(5)" onmouseleave="changeStar(nOfStars)"></i></span>
+				<textarea rows="5" cols="55" id="textarea" ></textarea>
+				
+				<div id="reviews">
+					<div>
+						<i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><br><br>
+						Very good service, staff is very friendly.
+					</div>
+					<div><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star dark"></i><br><br>
+						Wish you had more branches in Honolulu. 
+					</div>
+					<div><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star "></i><i class="fas fa-star"></i><br><br>
+						the stuff is top notch. i was highhhhhh up in that airplane. really freaking high
+					</div>
+					<div><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><br><br>
+					   The hostesses are hot
+					</div>
+					<div><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><br><br>
+						AMAZING! Wish i could afford to fly again with you
+					</div>
+					<div><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star dark"></i><br><br>
+						I LoOoOove K&T Travel. i think u guys can emproove the resto tho. peace out
+					</div>
+					<div><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><br><br>
+						trump is better than bernie
+					</div>
+					<div><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><br><br>
+						your lebanese tabbouleh is the best. thanks to the friendly staff
+					</div>
+					<div><i class="fas fa-star"></i><i class="fas fa-star dark"></i><i class="fas fa-star dark"></i><i class="fas fa-star dark"></i><i class="fas fa-star dark"></i><br><br>
+						my flight was delayed due to lockdown!! WTF BAD SERVICE
+					</div>
+					
+				</div>
+			</form>
+			
+		</div>
+		<script>
+			var nOfComments=0;
+			var nOfStars=5;
+			var fontWeight="normal";     
+			var fontStyle="normal";      
+			function bold(){
+				if (document.getElementById('textarea').style.fontWeight=="bold")
+				{document.getElementById('textarea').style.fontWeight="normal";}
+				else {document.getElementById('textarea').style.fontWeight="bold";}
+				fontWeight=document.getElementById('textarea').style.fontWeight;
+			}
+			function italic(){
+				if (document.getElementById('textarea').style.fontStyle=="italic")
+				{document.getElementById('textarea').style.fontStyle="normal";}
+				else {document.getElementById('textarea').style.fontStyle="italic";}
+				fontStyle=document.getElementById('textarea').style.fontStyle;
+			}
+			
+			function changeStar(n){
+				nOfStars=n;
+				for(var i = 4; i>n-1; i--){
+					document.getElementById('span').childNodes[i].style.color="#777";
+					console.log(nOfStars);
+				}
+				for(var i=0;i<n;i++){
+					document.getElementById('span').childNodes[i].style.color="#f5a637";
+				}
+			}
+				function changeStarHOVER(n){
+				
+				for(var i = 4; i>n-1; i--){
+					document.getElementById('span').childNodes[i].style.color="#777";
+					console.log(nOfStars);
+				}
+				for(var i=0;i<n;i++){
+					document.getElementById('span').childNodes[i].style.color="#f5a637";
+				}
+			}
+			
+			function hichamComment(){
+				var comment=document.getElementById('textarea').value; 
+				console.log(comment);
+				var jaafar = document.createTextNode(comment); 
+				var newComment = document.createElement("div"); 
+				newComment.appendChild(jaafar); 
+				newComment.style.fontWeight=fontWeight;
+				newComment.style.fontStyle=fontStyle;
+				var list = document.getElementById("reviews");  
+				list.insertBefore(newComment, list.childNodes[0]);
+				for (var i=nOfStars-1;i<4;i++){
+					var star=document.createElement("i");
+					star.setAttribute("class","fas fa-star dark");
+					list.childNodes[0].insertBefore(star,list.childNodes[0].childNodes[0]);
+				}
+				for (var i=0;i<nOfStars;i++){
+					var star =document.createElement("i");
+					star.setAttribute("class","fas fa-star");
+					list.childNodes[0].insertBefore(star,list.childNodes[0].childNodes[0]);
+				}
+				
+				nOfComments++;
+				
+			}
+			
+			
+		</script>
+	</body>
+
+</html>

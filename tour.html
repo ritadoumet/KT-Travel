@@ -1,0 +1,448 @@
+<html>
+	<head>
+		<title>K&T Travel - Find a tour</title>
+		<meta name="description" content="Book now your next trip to one of our wonderful destinations around the globe.">
+		<meta name="keywords" content="tour,travel,tourism,asia,europe,k&t travel, honeymoon,trip,adventure,cheap">
+		<meta charset="utf-8">
+		<link rel="icon" href="icon.png" type="image/icon"/>
+		<link rel="preconnect" href="https://fonts.gstatic.com">
+		<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
+		<style type="text/css">
+		body{
+			background-color:white;
+			font-family:montserrat;
+			color:#bf9fab;
+			margin:0;
+			overflow:overlay;
+			padding:0;
+		}
+		header{
+			background-color:#bf9fab;
+			box-shadow:0 4px 20px 10px rgba(0,0,0,0.3);
+			color:white;
+			border-radius:0 0 10% 10%;
+			z-index:100;
+			
+		}
+		#logo{
+				width: 60;
+				height: 60px;
+				display: inline-block;
+				border-radius: 50%;
+				filter: invert(1);
+				padding: 4px;
+				box-shadow: 3px -2px 20px 1px #003233, inset -4px 2px 8px 1px rgba(0,55,55,0.4), -2px 2px 10px 1px rgba(255,255,255,0.4);
+				border: 2px solid rgba(0,55,55,0.6);
+
+				border-bottom: none;
+				border-left: none;
+			}
+		#name{
+			    width: auto;
+				font-size: 40px;
+				height: auto;
+				display: inline-block;
+				margin: 0 20px 0;
+				position:relative;
+				top:10px;
+			}
+		.tour{
+			width:150px;
+			display:inline-block;
+			text-align:center;
+			margin:10px 5px 0 5px;
+			padding:15px 0 0 0;
+			border-radius:55px 55px 0 0;
+			}
+		.tour:hover{
+			background:linear-gradient(rgba(255, 200, 200,1)0%,rgba(255, 200, 200,0.3)50%,rgba(191, 159, 171,0.1)90%);
+			cursor:pointer;}
+		.tour div{
+			width:100px;
+			height:100px;
+			margin:auto;
+			border:4px solid white;
+			background-clip:content-box;
+			padding:7px;
+			border-radius:50%;
+			background-size:120px 120px;
+			}
+	.tour p{font-size:13px;}
+	#image{float:left;
+			width:550px;
+			display:inline-block;
+			height:300px;
+			border-radius:20px;
+			margin:10px 20px 10px 0;
+			background-repeat:none;}
+	#display{    position: relative;
+    box-shadow: -15px 15px 15px rgba(0,0,0,0.2);
+    z-index: 1;
+    overflow: auto;
+    display: none;
+	padding:30px 20px 30px 20px;
+    border-radius: 0 0 10% 10%;
+    }
+	#nothingyet{text-align:center;
+			font-size:50px;
+			height:50%;}
+	h2#title {margin-top:10px;}
+	header a{
+			text-decoration: none;
+    font-style: italic;
+    color: white;
+    position: absolute;
+    left: 25px;
+    font-size: smaller;
+    top: 20px;
+	}
+	header a:hover{
+			color:#ffeeee;
+			text-decoration:underline;
+			text-underline-position:under;}
+	#info h3{text-decoration:underline;
+			cursor:pointer;}
+	#bookings{
+			position:absolute;
+			width:70%;
+			right:15%;
+			z-index:5;
+			height:auto;
+			top:60px;
+			background-color:#bf9fab;
+			box-shadow:0 0 700px 500px rgba(0,0,0,0.6);
+			display:none;
+			color:white;
+			border-radius:5%
+	}
+	.butt:hover{
+	cursor:pointer;
+			box-shadow:0 0 2px 2px #ffc8c8;
+			border:none;
+	}
+	.butt{
+	
+	position: relative;
+    bottom: 10px;
+	margin:0 10px;
+    height: 30px;
+	color:white;
+	font-size:17px;
+    background-color: inherit;
+    font-family: montserrat;
+    border-radius: 4px;
+	border-color:rgba(255,200,200,0.4);
+box-shadow: -3px -2px 9px 1px #ffcdcc, inset 4px 2px 8px 1px rgba(255,200,200,0.4), 2px 2px 10px 1px rgba(0,0,0,0.4);
+				border: 2px solid rgba(255,200,200,1);
+
+				border-bottom: none;
+				border-right: none;
+	}
+	
+	#bookings img{
+			width:30px;
+			height:30px;
+			position:absolute;
+			top:20px;
+			border-radius:50%;
+			right:10px;
+			box-shadow: -3px -2px 9px 1px #003233, inset 4px 2px 8px 1px rgba(0,55,55,0.4), 2px 2px 10px 1px rgba(255,255,255,0.4);
+				border: 2px solid rgba(0,55,55,1);
+
+				border-bottom: none;
+				border-right: none;
+			filter:invert(1);
+			padding:3px;
+			z-index:999;
+	}
+	#bookings img:hover{
+			cursor:pointer;
+			box-shadow:0 0 2px 2px #003737;
+			border:none;
+	}
+	#bookings h3{
+		font-size:70px; font-weight:bold;margin:auto;text-align:center;padding:40px}
+	#bookings hr{border-top:2px solid white;
+			margin-right:30%;
+			margin-left:30%; 
+			margin-bottom:40px;}
+	#bookings h2{
+			
+		font-size:40px;}
+		label{
+		font-size:28px;
+		font-weight:bold;}
+		form{
+		text-align:center;
+		margin:20px 30%;}
+		
+	::-webkit-scrollbar {
+  width: 18px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: transparent;
+   box-shadow:-2px 0 10px  rgba(0,0,0,0.03), inset 4px 4px 8px rgba(50,0,0,0.1), inset -4px -4px 8px rgba(255,230,230,0.4);
+  
+}
+ 
+ input, select {
+    border: 1px solid rgb(191 159 171);
+    border-radius: 4px;}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+
+  background: rgba(166,139,149,0.8);
+
+  border-radius:15px 0;
+  border:1px solid rgba(255,220,220,0.5);
+  border-right:none;
+  border-bottom:none;
+  box-shadow:2px 5px 10px 1px rgba(0,0,0,0.2), inset 1px 1px 4px 3px rgba(255,200,200,0.5); 
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #b79ca6; 
+}
+	
+	
+		</style>
+		<script >
+			var pricePerPerson=[1590,3920,2920,1902,2090];
+			var n=-1;
+			function changeMain(a){
+				n=a;
+				if (n!=-1){
+					document.getElementById("nothingyet").style.display="none";
+					var title =["Paris - London - Rome - Florence - Barcelona","Copenhagen - Oslo - Lofthus - Balestrand - Loen - Bergen - Stockholm","Rio De Janeiro - Iguassu Falls - Buenos Aires - Mendoza - Santiago de Chile","Shanghai - Hangzhou - Zhouzhuang - Beijin","Niagara Falls - Montreal - Quebec - Ottawa - Toronto"];
+					var ndays =[10,15,12,9,11];
+					var agerangemin=[10,18,8,12,16];
+					var agerangemax=[90,99,80,32,85];
+					var image=["france1.jpg","scandinavia.jpg", "brazil.jpeg","china.jpg","canada.jpg"];
+					var desc=["Start and end in London! With our Europe Highlights Tour, you have a 10 days tour package taking you through London, England and 7 other destinations in Europe. Europe Highlights Tour includes accommodation in a hotel as well as flights, meals, transport and more."
+							,"Start in Oslo and end in Helsinki! With the In-depth Cultural tour Scandinavia Explorer, you have a 15 days tour package taking you through Oslo, Norway and 5 other destinations in Europe. Scandinavia Explorer includes accommodation in a hotel as well as an expert guide, meals, transport and more.",
+							"Experience the beautiful City of Kings in Lima. Venture to the ancient Inca citadel of Machu Picchu. Explore cloud forests, tea plantations and an orchid farm",
+							"Start in Beijing and end in Hong Kong! With the Discovery tour Real China, you have a 9 days tour package taking you through Beijing, China and 4 other destinations in China. Real China includes accommodation in a hotel as well as an expert guide, meals, transport and more.",
+							"Start and end in Toronto! With the In-depth Cultural tour Ontario & French Canada with Extended Stay in Toronto, you have a 11 days tour package taking you through Toronto, Canada and 5 other destinations in North America. Ontario & French Canada with Extended Stay in Toronto includes accommodation in a hotel as well as an expert guide, transport."];
+					document.getElementById("title").innerHTML=title[n];
+					document.getElementById("ndays").innerHTML=ndays[n];
+					document.getElementById("agerangemin").innerHTML=agerangemin[n];
+					document.getElementById("agerangemax").innerHTML=agerangemax[n];
+					document.getElementById("desc").innerHTML=desc[n];
+					document.getElementById("image").src=image[n];
+					document.getElementById("display").style.display="block";
+					var toutz=document.getElementsByClassName("tour");
+					for (i=0;i<5;i++){
+						if (i==n){
+							toutz[i].style.background="linear-gradient(rgba(255, 200, 200,1)0%,rgba(255, 200, 200,0.3)50%,rgba(191, 159, 171,0.1)90%)";
+						
+						}
+						else toutz[i].style.background="inherit";
+					}
+					
+				}
+			}
+			var loc=["Europe","Scandinavia","South America","China","Eastern Canada"];
+			
+			function showBookNow(){
+				document.getElementById("bookings").style.display="block";
+				document.getElementById("selectTour").value=loc[n];
+				document.getElementById("price").innerHTML=pricePerPerson[n];
+			}
+			function closetab(elem){
+					elem.parentElement.style.display="none";
+			}
+			function changedate(){
+					var today = new Date();
+					var dd = today.getDate();
+					var mm = today.getMonth()+1;
+					var yyyy = today.getFullYear();
+					 if(dd<10){
+							dd='0'+dd
+						} 
+						if(mm<10){
+							mm='0'+mm
+						} 
+
+					today = yyyy+'-'+mm+'-'+dd+'T08:30';
+					document.getElementById("date").setAttribute("min", today);}
+			function check(){
+				var choice=document.getElementById("selectTour").value;
+					for (i=0;i<5;i++){
+						if (choice==loc[i]){
+							n=i;
+							break;
+						}
+					}
+				var npple =document.getElementById("nOfPeople").value;
+				var sumtotal=npple*pricePerPerson[n];
+				document.getElementById("price").innerHTML=sumtotal;
+				document.getElementById("price").style.background="linear-gradient(rgba(191, 159, 171,1)0%,rgba(250,200,200,0.3)50%,rgba(250,200,200,1)90%)";
+				  setTimeout(function(){ document.getElementById("price").style.background="inherit"; }, 270);
+				
+			}
+				function show(){
+				document.getElementById("card").style.display="block";
+				document.getElementById("email").style.display="none";
+				document.getElementById("mail").required=false;
+				document.getElementById("bla").required=true;
+				document.getElementById("blabla").required=true;
+				}
+		 
+			function hide(){
+				document.getElementById("card").style.display="none";
+				document.getElementById("email").style.display="block";
+				document.getElementById("bla").required=false;
+				document.getElementById("blabla").required=false;
+				document.getElementById("mail").required=true;
+				}
+			function hoveron(elem){
+			elem.style.background="linear-gradient(rgba(255, 200, 200,1)0%,rgba(255, 200, 200,0.3)50%,rgba(191, 159, 171,0.1)90%)";
+			
+			}
+			function hoverout(elem,a){
+			if (a==n){return;}
+			elem.style.background="inherit";
+			}
+			
+			 var countDownDate = new Date("Feb 27, 2021 23:59:59").getTime();
+    var x = setInterval(function(){
+    var now = new Date().getTime();
+    var distance = countDownDate - now;
+    var days= Math.floor(distance / (1000 * 60 * 60 *24));
+    var hours = Math.floor((distance % (1000 * 60 * 60 *24)) / (1000 * 60 *60));
+    var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+    var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+    
+    document.getElementById("demo").innerHTML = days + "d " + hours + "h " + minutes + "m " + seconds + "s ";
+    if (distance < 0){
+       clearInterval(x);
+       document.getElementById("demo").innerHTML = "YOUR OFFER HAS EXPIRED"
+    }
+    }, 1000);
+		</script>
+	</head>
+	<body>
+		<header><a href="K&T Travel.html">Go back to main page</a>
+			<div style="margin:auto;width:fit-content;display:flex;padding:20px 0 40px 0;"> 
+				<img src="icon.png" alt="our logo" id="logo">
+				<h2 id="name">K&T Travel</h2>
+			</div> 
+			<hr style="width:30%;color:white;border-style:solid;"><!--hayda l title wel logo kholso-->
+			<div style="margin:auto;width:fit-content;"> <!-- hole l tours li byejo metel status bar 3a insta chwe-->
+				<div class="tour" onclick="changeMain(0)" onmouseover="hoveron(this)" onmouseleave="hoverout(this,0)">
+					<div style="background-image:url('france1.jpg');"> </div>	
+					<p>Europe</p>
+				</div>
+				<div class="tour" onclick="changeMain(1)" onmouseover="hoveron(this)" onmouseleave="hoverout(this,1)">
+					<div style="background-image:url('scandinavia.jpg');"> </div>
+					<p>Scandinavia</p>
+				</div>
+				<div class="tour"onclick="changeMain(2)" onmouseover="hoveron(this)" onmouseleave="hoverout(this,2)">
+					<div style="background-image:url('brazil.jpeg');"> </div>
+					<p>South America</p>
+				</div>
+				<div class="tour" onclick="changeMain(3)" onmouseover="hoveron(this)" onmouseleave="hoverout(this,3)">
+					<div style="background-image:url('china.jpg');"> </div>
+					<p>China</p>
+				</div>
+				<div class="tour" onclick="changeMain(4)"onmouseover="hoveron(this)" onmouseleave="hoverout(this,4)">
+					<div style="background-image:url('canada.jpg');"> </div>
+					<p>Eastern CA</p>
+				</div>
+			</div>
+			
+		</header>
+		<div></div>
+			
+			<h2 id="nothingyet">Click on a tour above to view it</h2>
+			<div id="display">
+			
+				<img src="france1.jpg" id="image">
+				<div id="info">
+					<h2 id="title">Paris - London - Rome - Florence - Barcelona </h2>
+					<h3 onclick="showBookNow()">BOOK NOW</h3>
+					<h4>Duration: <span id="ndays">10</span> days</h4>
+					<h4>Age Range: <span id="agerangemin">10</span> to <span id="agerangemax">90</span></h4>
+					<p id="desc">Start and end in London! With our Europe Highlights Tour, you have a 10 days tour package taking you through London, England and 7 other destinations in Europe. Europe Highlights Tour includes accommodation in a hotel as well as flights, meals, transport and more.</p>
+				
+				</div>
+				
+			</div>
+			
+		
+		</div>
+		
+		<div id="bookings">
+			<h3>Booking your tour</h3>
+			<hr>
+			<img src="closeIcon.png" onclick="closetab(this)" >
+			<form onsubmit=" alert('Info submitted successfully. You will receive a message from us shortly. Thank you for choosing K&T Travel!');">
+				<p><label>Select tour
+					<select id="selectTour" onchange="check()">
+						<option value="Europe">Europe</option>
+						<option value="Scandinavia">Scandinavia</option>
+						<option value="South America">South America</option>
+						<option value="China">China</option>
+						<option value="Eastern Canada">Eastern Canada</option>
+					</select>
+				</label></p>
+				<p><label>Date
+					<input type="datetime-local" id="date" min="2021-01-01T08:30" onclick="changedate()"required>
+				</label>
+				<p><label>Number of passengers
+					<input type="number" id="nOfPeople" name="nOfPeople" min="1" max="10" value="1" onchange="check()">
+				</label></p>
+				<label>Price(in USD): <span id="price" style="border-radius:0 0 15px 15px;padding:0 10px;"></span></label> 
+				<div style="width:auto;margin:auto;margin-top:30px;margin-bottom:3px;font-size:14px;color:white;text-align:center;">Your 20% discount offer will end in:</div>
+				<div id="demo" style="border-radius:25px;background-color:rgba(240,220,220,0.4);color:white;font-weight:bold;text-align:center;width:auto;margin:auto;padding:9px 5px;margin-bottom:20px;font-size:30px;"></div>
+				<hr>
+				<h2>Payment method<br><label>By card
+						<input type="radio" name="card" value="By card" onchange="show()"required>
+							<div id="card" style="border-radius:35px; background-color:rgba(240,220,220,0.4);padding:10px;margin:5px;">
+								<p><label>Card nb.
+								<input type="password" name="cardnb" required id="bla" style="border-color:rgb(90,30,80);">
+								
+								</label></p>
+								<p><label>Password
+								<input type="password" name="pass" required id="blabla">
+								</label></p>
+							</div>
+							</label>
+							<label>By cash
+						<input type="radio" name="card" value="By cash" onchange="hide()"  id="myRadio"></label>
+						
+						<div id="email" style="display:none;border-radius:35px; background-color:rgba(240,220,220,0.4);padding:10px;margin:5px;">
+							<p><label>Enter e-mail address
+							<input type="email" placeholder="user@gmail.com" width="85px"  name="email" id="mail"></label></p>
+						</div>
+						</h2>
+					
+					<input type="submit" value="Submit" class="butt">
+					<input type="reset" value="Clear" class="butt">
+			</form>
+			<hr>
+		</div>
+		
+				<footer style="z-index:0;width:100%;height:auto;background-color:white;color:#917982;">
+			<table style="align:center;margin-left:auto;margin-right:auto;width:auto;padding:20px;">
+				<tr>
+					<th style="padding:0 20px 0 0;font-size:27px;">Contact us</th>
+				
+				
+					<td><a href="mailto:rita.17.2001@gmail.com" style="color:#917982;text-decoration:underline;">Email</a><p>Phone number: +961 70 119 630</p></td>
+					<th style="padding:0 20px 0 85px;font-size:27px;">Our new <br>business</th>
+					<td ><div style="display:inline-block;background-image:url('fork.jpg');border-radius:50%; width:40px;height:40px;background-size:contain;background-color:white;box-shadow:0 0 4px 2px rgba(0,0,0,0.5);"></div>
+					<a href="K&T Resto.html" style="color:#917982;text-decoration:underline;display:inline-block;position:relative;bottom:11px;z-index:1;">K&T Resto</a></td>
+					
+					
+					</tr>
+				
+			</table>
+			</footer>
+	</body>
+
+</html>
